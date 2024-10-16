@@ -146,6 +146,9 @@ width: 100%;
     transform: translate(-50%, -50%);
     text-align: center;
     z-index: 1;
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
 }
 
 .content h1 {
@@ -154,16 +157,17 @@ width: 100%;
 }
 
 .countdown {
-    display: flex;
-    gap: 40px;
-    margin-top: 20px;
-    margin-left: 30px;
+    display: flex; /* Flexbox aktivieren für waagrechte Anordnung */
+    justify-content: center; /* Zentriert die Countdown-Elemente */
+    gap: 40px; /* Abstand zwischen den Countdown-Elementen */
+    margin-top: 20px; /* Abstand nach oben */
     font-size: 1.2rem;
 }
 
 .date {
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .number {
