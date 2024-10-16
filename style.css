@@ -71,26 +71,23 @@ header {
     font-size: 1.5em;
 }
 
-.notify-container {
-    text-align: center; /* Zentriert den Notify Button */
-    margin-top: 10px;   /* Abstand zwischen Social Media Links und Notify Button */
-}
-
+/* Notify Button */
 .notify-button {
     background-color: white;
     border: none;
-    padding: 10px 30px;
+    padding: 5px 10px;
     cursor: pointer;
     color: black;
-    font-size: 1.2em;
-    border-radius: 25px;
+    font-size: 1.em;
+    border-radius: 15px;
     font-weight: bold;
+    margin-right: 200px; /* Abstand zum letzten Social Media Link */
 }
 
+/* Responsive Anpassungen */
 @media (max-width: 768px) {
-    /* Mobile Anpassungen */
     .social-links {
-        gap: 10px; /* Kleinere Abstände auf mobilen Geräten */
+        gap: 10px;
     }
 
     .notify-button {
@@ -99,6 +96,7 @@ header {
     }
 }
 
+/* Menü-Icon */
 .menu-icon {
     font-size: 2.0em;
     cursor: pointer;
@@ -112,9 +110,9 @@ header {
 .sidebar {
     position: fixed;
     top: 0;
-    right: -300px; 
+    right: -300px;
     width: 300px;
-    height: 100%; 
+    height: 100%;
     transition: right 0.3s ease-in-out;
     padding-top: 20px;
     gap: 30px;
@@ -169,11 +167,11 @@ form {
     max-width: 300px;
     margin: 20px auto;
 }
-  
+
 form label {
     margin-bottom: 5px;
 }
-  
+
 form input,
 form textarea {
     margin-bottom: 10px;
@@ -181,7 +179,7 @@ form textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-  
+
 form button {
     padding: 10px;
     background-color: #007bff;
@@ -190,7 +188,7 @@ form button {
     border-radius: 4px;
     cursor: pointer;
 }
-  
+
 form button:hover {
     background-color: #0056b3;
 }
