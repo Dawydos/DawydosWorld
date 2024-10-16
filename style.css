@@ -1,14 +1,16 @@
+/* Allgemeine Einstellungen für den Seitenaufbau */
 body, html {
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
     overflow: hidden;
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif;  
     color: white;
     font-family: "Source Code Pro", monospace;
 }
 
+/* Video-Hintergrund */
 .video-background {
     position: fixed;
     top: 0;
@@ -56,7 +58,7 @@ header {
     font-family: "Caveat", cursive;
 }
 
-/* Social Links and Notify Button */
+/* Social Links und Notify Button */
 .social-links {
     display: flex;
     gap: 20px; /* Abstand zwischen den Social Media Links */
@@ -69,6 +71,11 @@ header {
     font-size: 1.5em;
 }
 
+.notify-container {
+    text-align: center; /* Zentriert den Notify Button */
+    margin-top: 10px;   /* Abstand zwischen Social Media Links und Notify Button */
+}
+
 .notify-button {
     background-color: white;
     border: none;
@@ -78,13 +85,12 @@ header {
     font-size: 1.2em;
     border-radius: 25px;
     font-weight: bold;
-    margin-left: 20px; /* Abstand zwischen den Social Media Links und dem Button */
 }
 
 @media (max-width: 768px) {
-    /* Mobile adjustments */
+    /* Mobile Anpassungen */
     .social-links {
-        gap: 10px; /* Smaller gap on mobile */
+        gap: 10px; /* Kleinere Abstände auf mobilen Geräten */
     }
 
     .notify-button {
@@ -102,19 +108,19 @@ header {
     z-index: 2;
 }
 
+/* Sidebar */
 .sidebar {
     position: fixed;
     top: 0;
-    right: -300px;
+    right: -300px; 
     width: 300px;
-    height: 100%;
+    height: 100%; 
     transition: right 0.3s ease-in-out;
     padding-top: 20px;
     gap: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
-  
 }
 
 .sidebar a {
@@ -124,6 +130,7 @@ header {
     text-align: center;
 }
 
+/* Inhalt */
 .content {
     position: absolute;
     top: 50%;
@@ -155,6 +162,7 @@ header {
     font-size: 2em;
 }
 
+/* Kontaktformular und Overlay */
 form {
     display: flex;
     flex-direction: column;
@@ -217,6 +225,7 @@ form button:hover {
 #sidebar-toggle:checked ~ .sidebar {
     right: 0;
 }
+
 #contact-form:target + #overlay {
     display: block;
 }
