@@ -42,14 +42,14 @@ header {
     box-sizing: border-box;
     z-index: 1;
     background-color: transparent;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
 .header-content {
     display: flex;
     width: 100%;
-    justify-content: space-between;
+    justify-content: column;
     align-items: center;
 }
 
@@ -58,43 +58,53 @@ header {
     font-family: "Caveat", cursive;
 }
 
-/* Social Links und Notify Button */
+/* Container für Social Links und Notify Button - vertikal zentriert */
+.social-notify-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Zentriert die Social Links und den Button horizontal */
+    gap: 30px; /* Abstand zwischen Social Media Links und Notify Button */
+width: 100%;
+}
+
+/* Social Links - Waagrecht zentriert */
 .social-links {
     display: flex;
+    justify-content: center; /* Zentriert die Links horizontal */
     gap: 20px; /* Abstand zwischen den Social Media Links */
-    align-items: center;
+
 }
 
 .social-links a {
     text-decoration: none;
     color: white;
-    font-size: 1.5em;
+    font-size: 1.5em; /* Größe der Social Media Icons */
 }
 
 /* Notify Button */
 .notify-button {
     background-color: white;
     border: none;
-    padding: 5px 10px;
+    padding: 10px 30px;
     cursor: pointer;
     color: black;
-    font-size: 1.em;
-    border-radius: 15px;
+    font-size: 1.2em;
+    border-radius: 25px;
     font-weight: bold;
-    margin-right: 200px; /* Abstand zum letzten Social Media Link */
 }
 
-/* Responsive Anpassungen */
+/* Responsive Anpassungen für kleinere Bildschirme */
 @media (max-width: 768px) {
     .social-links {
-        gap: 10px;
+        gap: 10px; /* Weniger Abstand zwischen den Links auf kleinen Bildschirmen */
     }
 
     .notify-button {
         font-size: 1em;
-        padding: 8px 15px;
+        padding: 8px 15px; /* Kleinere Größe des Buttons auf mobilen Geräten */
     }
 }
+
 
 /* Menü-Icon */
 .menu-icon {
@@ -216,9 +226,14 @@ form button:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.7);
     z-index: 1;
 }
+
+#overlay.active {
+    display: block;
+}
+
 
 #sidebar-toggle:checked ~ .sidebar {
     right: 0;
